@@ -1,0 +1,233 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI';
+  background-image: url('img/bg.png');
+  background-color: #f500db;
+  background-repeat: repeat-x;;
+}
+
+header {
+  height: 125px;
+  background-color: #ff7376;
+  color: white;
+  line-height: 125px;
+  font-size: 40px;
+}
+
+header .logo {
+  display: inline-block;
+  width: 89px;
+  height: 89px;
+  float: left;
+  margin-right: 22px;
+  background-image: url(img/red.png);
+  position: relative;
+  top: 15px;
+}
+
+header .experiences {
+  float: right;
+  display: inline-block;
+  font-size: 28px;
+}
+
+header .title {
+  float: left;
+  display: inline-block;
+}
+
+section {
+  height: calc(100vh - 125px);
+  position: relative;
+}
+
+section .video-block {
+  border-right: 1px solid white;
+  height: 100%;
+}
+
+section .video-block .video-wrapper .scott {
+  width: 100%;
+  height: 100%;
+  background-image: url(img/scott.png);
+  position: absolute;
+  background-size: cover;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+section .video-block .video-wrapper canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  border-radius: 50%;
+  z-index: 5;
+  display: none;
+}
+
+section .video-block .video-wrapper {
+  width: 70%;
+  position: relative;
+  margin: auto;
+  top: 45%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+section .video-block .video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+section .video-block .video-wrapper .control {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  cursor: pointer;
+  z-index: 55;
+  width: 30%;
+}
+
+section div.space {
+  height: 20px;
+}
+
+section .display-block {
+  height: 100%;
+  color: white;
+  padding-left: 50px;
+}
+
+section .display-block h1 {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+section .display-block ul.stats, section .display-block ul.prev-stats {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+section .display-block ul.prev-stats li, section .display-block ul.stats li {
+  font-size: 25px;
+  margin-bottom: 7px;
+  font-weight: 100;
+  position: relative;
+}
+
+section .display-block ul.stats li span.span-right {
+  float: right;
+}
+
+section .display-block ul.stats li .red-matters {
+  font-weight: bold;
+  font-size: 60px;
+  position: absolute;
+  right: 23px;
+  bottom: -10px;
+}
+
+section .display-block h2 {
+  margin-top: 100px;
+  color: black;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+section .display-block ul.prev-stats {
+  color: black;
+}
+
+.clear {
+  clear: both;
+}
+
+#loader {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 55;
+  text-align: center;
+  color: #ff7376;
+  background-color: rgba(0, 0, 0, 0.6);
+  line-height: 100%;
+  border-radius: 50%;
+  font-size: 30px;
+  display: none;
+}
+
+#loader div {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 521;
+}
+
+.preview {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  border-radius: 50%;
+  z-index: 5;
+  display: none;
+  background-position: center center;
+}
+
+.preview-tiny {
+  background-position: center center;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  top: 15px;
+  margin-bottom: 8px;
+}
+
+.last-preview {
+  width: 100%;
+  height: 179px;
+  background-size: cover;
+  border-radius: 50%;
+  background-position: center center;
+  position: relative;
+  top: 90px;
+}
+
+.web-cam {
+  width: 100%;
+  height: 100%;
+}
+
+.display-block-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.display-right {
+  float: right;
+  width: 80%;
+  padding-left: 20px;
+}
+
+.display-left img {
+  position: relative;
+  top: 70px;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.display-left {
+  float: left;
+  width: 20%;
+}

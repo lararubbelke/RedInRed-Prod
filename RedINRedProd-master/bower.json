@@ -1,0 +1,24 @@
+{
+  "name": "ttg",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "Sofiene Djebali <t-sodje@microsoft.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/DXFrance/RedINRed",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.6.3",
+    "odometer": "^0.4.7"
+  }
+}
