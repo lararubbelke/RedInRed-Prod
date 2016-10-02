@@ -99,7 +99,7 @@ app.post('/snap', function(req, res) {
       } catch (e) {
         var happy = 0;
       }
-      client_face.face.detect({
+    client_face.face.detect({
           url: img_url,
           analyzesAge: true,
           analyzesGender: true
@@ -111,7 +111,7 @@ app.post('/snap', function(req, res) {
             var age = 0;
             var gender = "-";
           }
-          client_vision.vision.analyzeImage({
+    client_vision.vision.analyzeImage({
               url: img_url,
               Description: true,
               Color: true
