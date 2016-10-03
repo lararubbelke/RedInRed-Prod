@@ -91,6 +91,7 @@ app.post('/snap', function(req, res) {
 
   blobService.createBlockBlobFromText('images', id + '.png', buffer, {contentType:type}, function(error, result, response) {
     var img_url = AzureURL('images', id + '.png');
+    
     client_emotion.emotion.analyzeEmotion({
       url: img_url
     }).then(function (response) {
