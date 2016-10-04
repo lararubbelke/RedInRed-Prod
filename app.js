@@ -95,7 +95,7 @@ app.post('/snap', function(req, res) {
       url: img_url
     }).then(function (response) {
       try {
-        var happy = response[0]['scores']['anger'];
+        var happy = response[0]['scores']['happiness'];
       } catch (e) {
         var happy = 0;
       }
