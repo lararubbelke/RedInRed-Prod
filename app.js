@@ -90,8 +90,7 @@ app.post('/snap', function(req, res) {
   var buffer = new Buffer(matches[2], 'base64');
 
   blobService.createBlockBlobFromText('images', id + '.png', buffer, {contentType:type}, function(error, result, response) {
-    var img_url = AzureURL('images', id + '.png');
-    
+    var img_url = blobService.getUrl('images', id + '.png');
     client_emotion.emotion.analyzeEmotion({
       url: img_url
     }).then(function (response) {
@@ -100,7 +99,7 @@ app.post('/snap', function(req, res) {
       } catch (e) {
         var happy = 0;
       }
-    client_face.face.detect({
+      client_face.face.detect({
           url: img_url,
           analyzesAge: true,
           analyzesGender: true
@@ -112,7 +111,7 @@ app.post('/snap', function(req, res) {
             var age = 0;
             var gender = "-";
           }
-    client_vision.vision.analyzeImage({
+          client_vision.vision.analyzeImage({
               url: img_url,
               Description: true,
               Color: true
@@ -149,21 +148,3 @@ app.post('/snap', function(req, res) {
 app.listen(process.env.PORT || 1337, function() {
   console.log('Listening on port' + process.env.PORT || 1337);
 });
-
-var AzureURL = function(containerName, blobName) {
-  var startDate = new Date();
-  var expiryDate = new Date(startDate);
-  expiryDate.setMinutes(startDate.getMinutes() + 100);
-  startDate.setMinutes(startDate.getMinutes() - 100);
-
-  var sharedAccessPolicy = {
-    AccessPolicy: {
-      Permissions: azure.BlobUtilities.SharedAccessPermissions.READ,
-      Start: startDate,
-      Expiry: expiryDate
-    },
-  };
-
-  var token_azure = blobService.generateSharedAccessSignature(containerName, blobName, sharedAccessPolicy);
-  return blobService.getUrl(containerName, blobName, token_azure);
-};
