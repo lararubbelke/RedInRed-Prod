@@ -12,7 +12,7 @@
     <div class="container">
       <div class="logo"></div>
       <div class="title">
-        <strong>BLUE</strong> is the new red
+        <strong>RED</strong> is the new red
       </div>
       <div class="experiences">Microsoft experiences'16</div>
     </div>
@@ -40,7 +40,7 @@
             <h1>Last picture (<span class="stat-time-hours odometer"></span>:<span class="stat-time-minutes odometer"></span>) :</h1>
             <ul class="stats">
               <li><span class="stat-context"><%= ((last) ? last.trust_context : "-" ) %></span><span class="span-right"><strong class="stat-trust red-matters odometer"><%= ((last) ? Math.round(last.trust * 100) : 0) %></strong>%</span></li>
-              <li>Was angry <span class="span-right"><span class="odometer stat-happy"><%= ((last) ? Math.round(last.happy * 100) : 0) %></span>%</span></li>
+              <li>Was happy <span class="span-right"><span class="odometer stat-happy"><%= ((last) ? Math.round(last.happy * 100) : 0) %></span>%</span></li>
               <li>Gender : <span class="stat-gender"><%= ((last) ? last.gender : "-" ) %></span></li>
               <li>Age : <span class="stat-age"><%= ((last) ? Math.round(last.age) : 0) %></span></li>
               <li>Main color : <span class="stat-color"><%= ((last) ? last.color : "-" ) %></span></li>
